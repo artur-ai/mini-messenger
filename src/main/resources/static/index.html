@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dorm3 // relay chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+
+<main id="login" class="login" hidden>
+    <pre class="banner" aria-label="DORM 3"> ____   ___  ____  __  __   _____
+|  _ \ / _ \|  _ \|  \/  | |___ /
+| | | | | | | |_) | |\/| |   |_ \
+| |_| | |_| |  _ <| |  | |  ___) |
+|____/ \___/|_| \_\_|  |_| |____/</pre>
+    <p class="tagline">KAI dormitory No.3 &middot; relay chat</p>
+    <form id="auth-form" class="auth" autocomplete="on">
+        <label>nick&gt; <input id="username" name="username" autocomplete="username" maxlength="20" required autofocus></label>
+        <label>pass&gt; <input id="password" name="password" type="password" autocomplete="current-password" maxlength="72" required></label>
+        <div class="actions">
+            <button type="submit" value="login">[ connect ]</button>
+            <button type="submit" value="register">[ register ]</button>
+        </div>
+        <p id="auth-error" class="error" role="alert"></p>
+    </form>
+    <p class="hint">nick: 3-20 chars, a-z 0-9 _ &middot; password: 8+ chars</p>
+</main>
+
+<div id="chat" class="chat" hidden>
+    <header class="topbar">
+        <button id="menu" class="menu" type="button" aria-label="Toggle channels">[=]</button>
+        <span id="topic" class="topic"></span>
+    </header>
+    <aside id="sidebar" class="sidebar"></aside>
+    <section class="main">
+        <div id="log" class="log" aria-live="polite"></div>
+        <form id="composer" class="composer">
+            <span class="prompt">[<span id="nick"></span>]</span>
+            <textarea id="input" rows="1" placeholder="type a message or /help" autocomplete="off" spellcheck="false"></textarea>
+            <span id="counter" class="counter">0/512</span>
+        </form>
+    </section>
+    <aside id="members" class="members"></aside>
+    <footer id="status" class="status"></footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
