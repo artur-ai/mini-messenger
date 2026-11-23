@@ -7,6 +7,13 @@ channels for the kitchen, the laundry and lost-and-found, private messages, and 
 
 ![dorm3 relay chat](docs/screenshots/chat.png)
 
+
+https://github.com/user-attachments/assets/0391935d-88f7-4345-b5e9-ae15275b7442
+
+
+
+
+
 ## Level
 
 **Standard** + side quests:
